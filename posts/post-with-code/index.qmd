@@ -1,0 +1,13 @@
+---
+title: "Post With Code"
+author: "Harlow Malloc"
+date: "2025-02-22"
+categories: [news, code, analysis]
+image: "image.jpg"
+---
+
+# nbDev Blog
+
+```python
+print("hello")
+```

@@ -1,0 +1,20 @@
+---
+title: "First Blog"
+author: "Srujan Padala"
+date: "2025-02-22"
+categories: [news, code, analysis]
+image: "image.jpg"
+---
+
+# My First Blog
+
+Hey!
+
+```
+int main()
+{
+    return 0;
+}
+```
+
+![](./image.jpg)
