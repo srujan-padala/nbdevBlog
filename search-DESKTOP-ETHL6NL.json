@@ -1,0 +1,148 @@
+[
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/gg.html",
+    "href": "posts/gg.html",
+    "title": "nbdev: Develop Python Packages Seamlessly from Jupyter Notebooks",
+    "section": "",
+    "text": "Python package development can be complex, requiring structured modules, proper documentation, and testing. nbdev, an open-source library from Fast.ai, simplifies this process by allowing developers to create, document, and test Python packages directly within Jupyter Notebooks. This enables a more interactive and efficient development workflow.\nTraditional Python package development involves writing scripts, maintaining separate documentation, and setting up unit tests manually. With nbdev, all these steps are integrated into a single environment, reducing friction and increasing productivity."
+  },
+  {
+    "objectID": "posts/gg.html#introduction",
+    "href": "posts/gg.html#introduction",
+    "title": "nbdev: Develop Python Packages Seamlessly from Jupyter Notebooks",
+    "section": "",
+    "text": "Python package development can be complex, requiring structured modules, proper documentation, and testing. nbdev, an open-source library from Fast.ai, simplifies this process by allowing developers to create, document, and test Python packages directly within Jupyter Notebooks. This enables a more interactive and efficient development workflow.\nTraditional Python package development involves writing scripts, maintaining separate documentation, and setting up unit tests manually. With nbdev, all these steps are integrated into a single environment, reducing friction and increasing productivity."
+  },
+  {
+    "objectID": "posts/gg.html#installation-setup",
+    "href": "posts/gg.html#installation-setup",
+    "title": "nbdev: Develop Python Packages Seamlessly from Jupyter Notebooks",
+    "section": "Installation & Setup",
+    "text": "Installation & Setup\nnbdev works on macOS, Linux, and most Unix-style operating systems. It works on Windows under WSL, but not under cmd or Powershell.\nFor Mac and Linux, enter:\nconda install -c fastai -y nbdev\nOr for Mac, Linux and Windows: If you’re using pip\npip install nbdev\nYou can also run nbdev_help from the terminal to see the full list of available commands:\n!nbdev_help\nNote that nbdev must be installed into the same Python environment that you use for both Jupyter and your project.\n\nThis initializes a structured project with necessary configurations, including essential files such as:\n\nsettings.ini: Stores project metadata.\nindex.ipynb: The main notebook for your package.\nnbs/: A directory containing all Jupyter Notebooks.\nREADME.md: The auto-generated project description."
+  },
+  {
+    "objectID": "posts/gg.html#key-features-explanation",
+    "href": "posts/gg.html#key-features-explanation",
+    "title": "nbdev: Develop Python Packages Seamlessly from Jupyter Notebooks",
+    "section": "Key Features & Explanation",
+    "text": "Key Features & Explanation\n\n1. Generating Documentation with nbdev\nDevelop your entire Python package in Jupyter Notebooks, allowing for interactive coding, visualization, and documentation. This eliminates the need for separate .py files.No need to switch between multiple files (code files, test files, and documentation files).\n\n\n2. Building Documentation in nbdev\nWith nbdev, documentation is generated directly from docstrings and markdown cells in notebooks. Run the following command to build documentation:\nnbdev_build_docs\nThis extracts markdown and code cells to create a well-structured documentation site.\n\n\n3. Built-in Testing\nnbdev supports unit testing within notebooks. You can write and execute tests using:\nnbdev_test\nThis ensures code correctness without requiring separate test files.\n\n\n4. Version Control\nnbdev provides tools to manage version control and avoid merge conflicts with Jupyter Notebooks. We can use this\nnbdev_clean_nbs\nThis strips unnecessary metadata before committing to Git, making collaboration seamless. ### 5.Type Checking & Linting\nnbdev_fix\nhelps enforce coding style and detect type errors, ensuring clean and professional-quality code.\n\n\n6. Integration with GitHub Actions for Continuous Integration\n\nAutomating Testing with GitHub Actions\nContinuous Integration (CI) ensures that any change to a codebase is automatically tested, improving software quality and reducing manual effort. nbdev supports GitHub Actions, allowing developers to automate testing and validation whenever new code is pushed.\nWith GitHub Actions, nbdev projects benefit from:\n- Automated Testing – Runs nbdev_test to check for errors.\n- Code Consistency – Ensures that every commit follows the defined project structure.\n- Early Error Detection – Identifies potential issues before merging code.\n- Streamlined Collaboration – Helps teams maintain high code quality.\nOnce configured, GitHub Actions will execute test scripts whenever a change is made, ensuring that the package remains stable before publishing.\n\n\nBenefits of Using CI/CD with nbdev\n\nReduces Manual Testing Effort – No need to run tests manually before every release.\n\nEnsures Reliability – Automatically checks if code modifications break functionality.\n\nSpeeds Up Development – Allows developers to focus on coding rather than debugging issues later.\n\n\n\n\n7. Publishing Packages to PyPI and Conda\n\nDistributing Python Packages Efficiently\nAfter developing a package using nbdev, making it publicly available is crucial. nbdev simplifies package distribution by integrating with PyPI (Python Package Index) and Conda. This enables users to install and use the package effortlessly.\n\n\nPublishing to PyPI\nPyPI is the official repository for Python packages, allowing easy installation via pip install package_name. By publishing an nbdev package to PyPI, developers ensure that their code is accessible to the wider Python community.\n\nWhy Publish to PyPI?\n\nEasy Installation – Users can install the package using pip.\n\nVersion Control – Every release is properly managed and versioned.\n\nWider Reach – The package becomes discoverable by developers worldwide.\n\n\n\n\nPublishing to Conda\nConda is another popular package management system, widely used in data science and machine learning. Unlike PyPI, Conda supports non-Python dependencies, making it ideal for scientific computing environments.\n\nWhy Publish to Conda?\n\nBetter Environment Management – Ideal for projects requiring system-level dependencies.\n\nSupports Multiple Languages – Works for Python, R, and other languages.\n\nPreferred in Data Science – Many researchers and engineers use Conda for package installations.\n\nBy leveraging nbdev’s built-in tools, developers can seamlessly distribute their Python packages across both PyPI and Conda, ensuring ease of access for different user groups."
+  },
+  {
+    "objectID": "posts/gg.html#code-examples",
+    "href": "posts/gg.html#code-examples",
+    "title": "nbdev: Develop Python Packages Seamlessly from Jupyter Notebooks",
+    "section": "Code Examples",
+    "text": "Code Examples\nLet’s create a simple function inside a Jupyter Notebook and convert it into a package.\n#|export\ndef add_numbers(a, b) :\n    \"\"\"\n    Adds two integer numbers a and b and returns the result.\n    \n    \n    Returns: Sum of a and b\n    \"\"\"\n    return a + b\n\n#|export\ndef add(a: int, b: int) -&gt; int:\n    \"\"\"Returns the sum of two numbers.\"\"\"\n    return a + b\nRunning Tests\nassert add(2, 3) == 5\nGenerating Documentation\nRun the following command to generate HTML documentation:\nnbdev_export"
+  },
+  {
+    "objectID": "posts/gg.html#screenshots",
+    "href": "posts/gg.html#screenshots",
+    "title": "nbdev: Develop Python Packages Seamlessly from Jupyter Notebooks",
+    "section": "Screenshots",
+    "text": "Screenshots\n\n\n\nExample Notebook\n\n\n\n Auto-generated documentation"
+  },
+  {
+    "objectID": "posts/gg.html#use-cases",
+    "href": "posts/gg.html#use-cases",
+    "title": "nbdev: Develop Python Packages Seamlessly from Jupyter Notebooks",
+    "section": "Use Cases",
+    "text": "Use Cases\n\nData Science Projects: Develop and document reusable code interactively.\nEducational Tools: Simplify teaching by integrating code, markdown, and explanations.\nRapid Prototyping: Quickly develop and share Python packages.\nCollaborative Development: Enable multiple contributors to work efficiently within notebooks.\nAutomated CI/CD Pipelines: Ensure continuous testing and validation with GitHub Actions.\nEasy Package Distribution: Publish projects to **PyPI* and Conda with minimal effort."
+  },
+  {
+    "objectID": "posts/gg.html#conclusion",
+    "href": "posts/gg.html#conclusion",
+    "title": "nbdev: Develop Python Packages Seamlessly from Jupyter Notebooks",
+    "section": "Conclusion",
+    "text": "Conclusion\nnbdev revolutionizes Python package development by combining coding, documentation, and testing within Jupyter Notebooks. It eliminates redundant workflows by automatically generating documentation and running tests, ensuring consistency and reducing manual effort. With seamless GitHub integration, it simplifies version control and collaboration while enabling automated CI/CD through GitHub Actions. Additionally, nbdev makes package publishing to PyPI and Conda effortless, allowing developers to distribute their work efficiently. Whether for open-source libraries, research projects, or rapid prototyping, nbdev enhances productivity, encourages interactive development, and streamlines the entire software lifecycle, making it an invaluable tool for modern Python developers."
+  },
+  {
+    "objectID": "posts/gg.html#references-further-readings",
+    "href": "posts/gg.html#references-further-readings",
+    "title": "nbdev: Develop Python Packages Seamlessly from Jupyter Notebooks",
+    "section": "References & Further Readings",
+    "text": "References & Further Readings\n1.nbdev official website\n2.nbdev youtube tutorial"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "nbdevBlog",
+    "section": "",
+    "text": "nbdev Blog\n\n\n\n\n\n\nPython\n\n\nnbdev\n\n\nDevelopment\n\n\n\nLearn how to use nbdev for developing, testing, and documenting Python packages directly from Jupyter Notebooks.\n\n\n\n\n\nFeb 25, 2025\n\n\nSrujan Padala, Ramavath Snehalatha, Sura Sravan Kumar\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/firstBlog/blog.html",
+    "href": "posts/firstBlog/blog.html",
+    "title": "nbdev: Develop Python Packages Seamlessly from Jupyter Notebooks",
+    "section": "",
+    "text": "Python package development can be complex, requiring structured modules, proper documentation, and testing. nbdev, an open-source library from Fast.ai, simplifies this process by allowing developers to create, document, and test Python packages directly within Jupyter Notebooks. This enables a more interactive and efficient development workflow.\nTraditional Python package development involves writing scripts, maintaining separate documentation, and setting up unit tests manually. With nbdev, all these steps are integrated into a single environment, reducing friction and increasing productivity."
+  },
+  {
+    "objectID": "posts/firstBlog/blog.html#introduction",
+    "href": "posts/firstBlog/blog.html#introduction",
+    "title": "nbdev: Develop Python Packages Seamlessly from Jupyter Notebooks",
+    "section": "",
+    "text": "Python package development can be complex, requiring structured modules, proper documentation, and testing. nbdev, an open-source library from Fast.ai, simplifies this process by allowing developers to create, document, and test Python packages directly within Jupyter Notebooks. This enables a more interactive and efficient development workflow.\nTraditional Python package development involves writing scripts, maintaining separate documentation, and setting up unit tests manually. With nbdev, all these steps are integrated into a single environment, reducing friction and increasing productivity."
+  },
+  {
+    "objectID": "posts/firstBlog/blog.html#installation-setup",
+    "href": "posts/firstBlog/blog.html#installation-setup",
+    "title": "nbdev: Develop Python Packages Seamlessly from Jupyter Notebooks",
+    "section": "Installation & Setup",
+    "text": "Installation & Setup\nnbdev works on macOS, Linux, and most Unix-style operating systems. It works on Windows under WSL, but not under cmd or Powershell.\nFor Mac and Linux, enter:\nconda install -c fastai -y nbdev\nOr for Mac, Linux and Windows: If you’re using pip\npip install nbdev\nYou can also run nbdev_help from the terminal to see the full list of available commands:\nnbdev_help\nNote that nbdev must be installed into the same Python environment that you use for both Jupyter and your project.\n\nThis initializes a structured project with necessary configurations, including essential files such as:\n\nsettings.ini: Stores project metadata.\nindex.ipynb: The main notebook for your package.\nnbs/: A directory containing all Jupyter Notebooks.\nREADME.md: The auto-generated project description."
+  },
+  {
+    "objectID": "posts/firstBlog/blog.html#key-features-explanation",
+    "href": "posts/firstBlog/blog.html#key-features-explanation",
+    "title": "nbdev: Develop Python Packages Seamlessly from Jupyter Notebooks",
+    "section": "Key Features & Explanation",
+    "text": "Key Features & Explanation\n\n1. Generating Documentation with nbdev\nDevelop your entire Python package in Jupyter Notebooks, allowing for interactive coding, visualization, and documentation. This eliminates the need for separate .py files.No need to switch between multiple files (code files, test files, and documentation files).\n\n\n2. Building Documentation in nbdev\nWith nbdev, documentation is generated directly from docstrings and markdown cells in notebooks. Run the following command to build documentation:\nnbdev_build_docs\nThis extracts markdown and code cells to create a well-structured documentation site.\n\n\n3. Built-in Testing\nnbdev supports unit testing within notebooks. You can write and execute tests using:\nnbdev_test\nThis ensures code correctness without requiring separate test files.\n\n\n4. Version Control\nnbdev provides tools to manage version control and avoid merge conflicts with Jupyter Notebooks. We can use this\nnbdev_clean_nbs\nThis strips unnecessary metadata before committing to Git, making collaboration seamless. ### 5.Type Checking & Linting\nnbdev_fix\nhelps enforce coding style and detect type errors, ensuring clean and professional-quality code.\n\n\n6. Integration with GitHub Actions for Continuous Integration\n\nAutomating Testing with GitHub Actions\nContinuous Integration (CI) ensures that any change to a codebase is automatically tested, improving software quality and reducing manual effort. nbdev supports GitHub Actions, allowing developers to automate testing and validation whenever new code is pushed.\nWith GitHub Actions, nbdev projects benefit from:\n- Automated Testing – Runs nbdev_test to check for errors.\n- Code Consistency – Ensures that every commit follows the defined project structure.\n- Early Error Detection – Identifies potential issues before merging code.\n- Streamlined Collaboration – Helps teams maintain high code quality.\nOnce configured, GitHub Actions will execute test scripts whenever a change is made, ensuring that the package remains stable before publishing.\n\n\nBenefits of Using CI/CD with nbdev\n\nReduces Manual Testing Effort – No need to run tests manually before every release.\n\nEnsures Reliability – Automatically checks if code modifications break functionality.\n\nSpeeds Up Development – Allows developers to focus on coding rather than debugging issues later.\n\n\n\n\n7. Publishing Packages to PyPI and Conda\n\nDistributing Python Packages Efficiently\nAfter developing a package using nbdev, making it publicly available is crucial. nbdev simplifies package distribution by integrating with PyPI (Python Package Index) and Conda. This enables users to install and use the package effortlessly.\n\n\nPublishing to PyPI\nPyPI is the official repository for Python packages, allowing easy installation via pip install package_name. By publishing an nbdev package to PyPI, developers ensure that their code is accessible to the wider Python community.\n\nWhy Publish to PyPI?\n\nEasy Installation – Users can install the package using pip.\n\nVersion Control – Every release is properly managed and versioned.\n\nWider Reach – The package becomes discoverable by developers worldwide.\n\n\n\n\nPublishing to Conda\nConda is another popular package management system, widely used in data science and machine learning. Unlike PyPI, Conda supports non-Python dependencies, making it ideal for scientific computing environments.\n\nWhy Publish to Conda?\n\nBetter Environment Management – Ideal for projects requiring system-level dependencies.\n\nSupports Multiple Languages – Works for Python, R, and other languages.\n\nPreferred in Data Science – Many researchers and engineers use Conda for package installations.\n\nBy leveraging nbdev’s built-in tools, developers can seamlessly distribute their Python packages across both PyPI and Conda, ensuring ease of access for different user groups."
+  },
+  {
+    "objectID": "posts/firstBlog/blog.html#code-example",
+    "href": "posts/firstBlog/blog.html#code-example",
+    "title": "nbdev: Develop Python Packages Seamlessly from Jupyter Notebooks",
+    "section": "Code Example",
+    "text": "Code Example\nLet’s create a simple function inside a Jupyter Notebook and convert it into a package.\n1.Create an nbdev Project\nnbdev_new\nThis will prompt you for project details and set up files. Let’s assume our package name is “sum_of_numbers”.\n2.Open a Jupyter Notebook inside the project. Write your function and mark it with # | export.\n#|export\ndef add_numbers(a, b) :\n    \"\"\"\n    Adds two integer numbers a and b and returns the result.\n    \n    \n    Returns: Sum of a and b\n    \"\"\"\n    return a + b\n3.Run the below command in a Jupyter cell or terminal:\nnbdev_export\nThis will generate a Python module inside project, e.g., sum_of_numbers/core.py.\n4.Add markdown cells explaining the function in the same notebook, then run:\nnbdev_build_docs\nThis will create HTML documentation in the docs/folder.\n5.Write a test inside your notebook:\nassert sum_of_numbers(3, 5) == 8\nThen run:\nnbdev_test\nThis will run all test cases to ensure correctness. 6.To publish as a Python Package, push it to GitHub, and run:\nnbdev_prepare\nAfter publishing to PyPI (Python Package Index), now package is available for anyone to install via:\npip install sum_of_numbers\n\n\n\nAlt text"
+  },
+  {
+    "objectID": "posts/firstBlog/blog.html#use-cases",
+    "href": "posts/firstBlog/blog.html#use-cases",
+    "title": "nbdev: Develop Python Packages Seamlessly from Jupyter Notebooks",
+    "section": "Use Cases",
+    "text": "Use Cases\n\nData Science Projects: Develop and document reusable code interactively.\nEducational Tools: Simplify teaching by integrating code, markdown, and explanations.\nRapid Prototyping: Quickly develop and share Python packages.\nCollaborative Development: Enable multiple contributors to work efficiently within notebooks.\nAutomated CI/CD Pipelines: Ensure continuous testing and validation with GitHub Actions.\nEasy Package Distribution: Publish projects to **PyPI* and Conda with minimal effort."
+  },
+  {
+    "objectID": "posts/firstBlog/blog.html#conclusion",
+    "href": "posts/firstBlog/blog.html#conclusion",
+    "title": "nbdev: Develop Python Packages Seamlessly from Jupyter Notebooks",
+    "section": "Conclusion",
+    "text": "Conclusion\nnbdev revolutionizes Python package development by combining coding, documentation, and testing within Jupyter Notebooks. It eliminates redundant workflows by automatically generating documentation and running tests, ensuring consistency and reducing manual effort. With seamless GitHub integration, it simplifies version control and collaboration while enabling automated CI/CD through GitHub Actions. Additionally, nbdev makes package publishing to PyPI and Conda effortless, allowing developers to distribute their work efficiently. Whether for open-source libraries, research projects, or rapid prototyping, nbdev enhances productivity, encourages interactive development, and streamlines the entire software lifecycle, making it an invaluable tool for modern Python developers."
+  },
+  {
+    "objectID": "posts/firstBlog/blog.html#references-further-readings",
+    "href": "posts/firstBlog/blog.html#references-further-readings",
+    "title": "nbdev: Develop Python Packages Seamlessly from Jupyter Notebooks",
+    "section": "References & Further Readings",
+    "text": "References & Further Readings\n1.nbdev official website\n2.nbdev youtube tutorial"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "nbDev Blog\nprint(\"hello\")"
+  }
